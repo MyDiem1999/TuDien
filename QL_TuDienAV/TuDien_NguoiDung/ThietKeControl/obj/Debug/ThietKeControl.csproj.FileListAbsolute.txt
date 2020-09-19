@@ -1,0 +1,6 @@
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\ThietKeControl\bin\Debug\ThietKeControl.dll
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\ThietKeControl\bin\Debug\ThietKeControl.pdb
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\ThietKeControl\obj\Debug\ThietKeControl.csproj.CoreCompileInputs.cache
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\ThietKeControl\obj\Debug\ThietKeControl.dll
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\ThietKeControl\obj\Debug\ThietKeControl.pdb
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\ThietKeControl\obj\Debug\ThietKeControl.csprojAssemblyReference.cache

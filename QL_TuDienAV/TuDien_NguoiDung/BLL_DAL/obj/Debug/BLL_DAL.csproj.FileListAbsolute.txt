@@ -1,0 +1,7 @@
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\BLL_DAL\bin\Debug\BLL_DAL.dll.config
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\BLL_DAL\bin\Debug\BLL_DAL.dll
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\BLL_DAL\bin\Debug\BLL_DAL.pdb
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\BLL_DAL\obj\Debug\BLL_DAL.csproj.CoreCompileInputs.cache
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\BLL_DAL\obj\Debug\BLL_DAL.dll
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\BLL_DAL\obj\Debug\BLL_DAL.pdb
+E:\GitHub\TuDien_NguoiDung (1)\TuDien_NguoiDung\BLL_DAL\obj\Debug\BLL_DAL.csprojAssemblyReference.cache

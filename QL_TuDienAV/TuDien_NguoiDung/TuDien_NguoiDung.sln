@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormMain", "FormMain\FormMain.csproj", "{12C3C0EC-DE04-4A53-B402-0605942649A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DAL", "BLL_DAL\BLL_DAL.csproj", "{4B34923E-8342-4B5C-B772-CB3B771613A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThietKeControl", "ThietKeControl\ThietKeControl.csproj", "{F8C9F2C3-0744-4F39-859A-BBEB1EA972FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12C3C0EC-DE04-4A53-B402-0605942649A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C3C0EC-DE04-4A53-B402-0605942649A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C3C0EC-DE04-4A53-B402-0605942649A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C3C0EC-DE04-4A53-B402-0605942649A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B34923E-8342-4B5C-B772-CB3B771613A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B34923E-8342-4B5C-B772-CB3B771613A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B34923E-8342-4B5C-B772-CB3B771613A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B34923E-8342-4B5C-B772-CB3B771613A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C9F2C3-0744-4F39-859A-BBEB1EA972FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C9F2C3-0744-4F39-859A-BBEB1EA972FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C9F2C3-0744-4F39-859A-BBEB1EA972FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C9F2C3-0744-4F39-859A-BBEB1EA972FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E82C9E7-CE46-4F14-BE23-F880561AF01F}
+	EndGlobalSection
+EndGlobal

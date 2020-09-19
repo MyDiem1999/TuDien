@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QL_TUDIEN" Class="QLTDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-JRLFG0U\SQLEXPRESS;Initial Catalog=QL_TUDIEN;User ID=sa" SettingsObjectName="BLL_DAL.Properties.Settings" SettingsPropertyName="QL_TUDIENConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.KHACHHANG" Member="KHACHHANGs">
+    <Type Name="KHACHHANG">
+      <Column Name="TAIKHOAN" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MATKHAU" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TENNGUOIDUNG" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NGAYSINH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="GIOITINH" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DIACHI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Association Name="KHACHHANG_TuDienKhachHang" Member="TuDienKhachHangs" ThisKey="TAIKHOAN" OtherKey="TaiKhoan" Type="TuDienKhachHang" />
+      <Association Name="KHACHHANG_TUYEUTHICH" Member="TUYEUTHICHes" ThisKey="TAIKHOAN" OtherKey="TAIKHOAN" Type="TUYEUTHICH" />
+      <Association Name="TINHTHANH_KHACHHANG" Member="TINHTHANH" ThisKey="DIACHI" OtherKey="MATINH" Type="TINHTHANH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAITU" Member="LOAITUs">
+    <Type Name="LOAITU">
+      <Column Name="MALOAI" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TENLOAI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NGHIALOAITU" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="LOAITU_TU" Member="TUs" ThisKey="MALOAI" OtherKey="MALOAI" Type="TU" />
+      <Association Name="LOAITU_TuDienKhachHang" Member="TuDienKhachHangs" ThisKey="MALOAI" OtherKey="LoaiTu" Type="TuDienKhachHang" />
+      <Association Name="LOAITU_TUYEUTHICH" Member="TUYEUTHICHes" ThisKey="MALOAI" OtherKey="MALOAI" Type="TUYEUTHICH" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TINHTHANH" Member="TINHTHANHs">
+    <Type Name="TINHTHANH">
+      <Column Name="MATINH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TENTINH" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="TINHTHANH_KHACHHANG" Member="KHACHHANGs" ThisKey="MATINH" OtherKey="DIACHI" Type="KHACHHANG" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TU" Member="TUs">
+    <Type Name="TU">
+      <Column Name="TUVUNG" Type="System.String" DbType="Char(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MALOAI" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PHIENAM" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NGHIA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="TU_TUYEUTHICH" Member="TUYEUTHICHes" ThisKey="TUVUNG,MALOAI" OtherKey="TUVUNG,MALOAI" Type="TUYEUTHICH" />
+      <Association Name="LOAITU_TU" Member="LOAITU" ThisKey="MALOAI" OtherKey="MALOAI" Type="LOAITU" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TuDienKhachHang" Member="TuDienKhachHangs">
+    <Type Name="TuDienKhachHang">
+      <Column Name="Tu" Type="System.String" DbType="Char(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LoaiTu" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PhienAm" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Nghia" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TaiKhoan" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="KHACHHANG_TuDienKhachHang" Member="KHACHHANG" ThisKey="TaiKhoan" OtherKey="TAIKHOAN" Type="KHACHHANG" IsForeignKey="true" />
+      <Association Name="LOAITU_TuDienKhachHang" Member="LOAITU1" ThisKey="LoaiTu" OtherKey="MALOAI" Type="LOAITU" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TUYEUTHICH" Member="TUYEUTHICHes">
+    <Type Name="TUYEUTHICH">
+      <Column Name="TUVUNG" Type="System.String" DbType="Char(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MALOAI" Type="System.String" DbType="Char(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TAIKHOAN" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="KHACHHANG_TUYEUTHICH" Member="KHACHHANG" ThisKey="TAIKHOAN" OtherKey="TAIKHOAN" Type="KHACHHANG" IsForeignKey="true" />
+      <Association Name="LOAITU_TUYEUTHICH" Member="LOAITU" ThisKey="MALOAI" OtherKey="MALOAI" Type="LOAITU" IsForeignKey="true" />
+      <Association Name="TU_TUYEUTHICH" Member="TU" ThisKey="TUVUNG,MALOAI" OtherKey="TUVUNG,MALOAI" Type="TU" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

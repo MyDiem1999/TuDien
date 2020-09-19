@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12C3C0EC-DE04-4A53-B402-0605942649A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FormMain</RootNamespace>
+    <AssemblyName>FormMain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Software\Activation\Guna UI Activation\bin\Debug\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTraTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTraTu.Designer.cs">
+      <DependentUpon>frmTraTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTuDienCuaBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTuDienCuaBan.Designer.cs">
+      <DependentUpon>frmTuDienCuaBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYeuThich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYeuThich.Designer.cs">
+      <DependentUpon>frmYeuThich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTraTu.resx">
+      <DependentUpon>frmTraTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTuDienCuaBan.resx">
+      <DependentUpon>frmTuDienCuaBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYeuThich.resx">
+      <DependentUpon>frmYeuThich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL_DAL\BLL_DAL.csproj">
+      <Project>{4b34923e-8342-4b5c-b772-cb3b771613a3}</Project>
+      <Name>BLL_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ThietKeControl\ThietKeControl.csproj">
+      <Project>{F8C9F2C3-0744-4F39-859A-BBEB1EA972FD}</Project>
+      <Name>ThietKeControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\add.png" />
+    <Content Include="images\added.png" />
+    <Content Include="images\background.jpg" />
+    <Content Include="images\background1.jpg" />
+    <Content Include="images\background2.jpg" />
+    <Content Include="images\background3.jpg" />
+    <Content Include="images\background4.jpg" />
+    <Content Include="images\background5.jpg" />
+    <Content Include="images\background6.jpg" />
+    <Content Include="images\background7.jpg" />
+    <Content Include="images\Close.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\dictionary.png" />
+    <Content Include="images\exit.png" />
+    <Content Include="images\exit1.png" />
+    <Content Include="images\green_right_arrow_101.jpg" />
+    <Content Include="images\icon.ico" />
+    <Content Include="images\icon4.ico" />
+    <Content Include="images\KT.png" />
+    <Content Include="images\pass.png" />
+    <Content Include="images\save.png" />
+    <Content Include="images\search.jpg" />
+    <Content Include="images\search.png" />
+    <Content Include="images\setup.ico" />
+    <Content Include="images\speaker.png" />
+    <Content Include="images\user.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
